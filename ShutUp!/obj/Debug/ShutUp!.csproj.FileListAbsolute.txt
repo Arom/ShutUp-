@@ -1,0 +1,9 @@
+c:\users\chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\bin\Debug\ShutUp!.exe.config
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\bin\Debug\ShutUp!.exe
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\bin\Debug\ShutUp!.pdb
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp!.csprojResolveAssemblyReference.cache
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp_.Form1.resources
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp_.Properties.Resources.resources
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp!.csproj.GenerateResource.Cache
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp!.exe
+C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp!.pdb
