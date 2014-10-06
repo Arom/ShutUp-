@@ -1,6 +1,6 @@
 ﻿namespace ShutUp_
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -109,7 +109,7 @@
             this.txtMins.TabIndex = 7;
             this.txtMins.Text = "0";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,9 +122,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btStart);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "ShutUp!";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

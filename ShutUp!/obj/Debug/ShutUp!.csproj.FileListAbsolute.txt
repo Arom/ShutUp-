@@ -7,3 +7,12 @@ C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\S
 C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp!.csproj.GenerateResource.Cache
 C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp!.exe
 C:\Users\Chris\documents\visual studio 2013\Projects\ShutUp!\ShutUp!\obj\Debug\ShutUp!.pdb
+D:\Git\ShutUp-\ShutUp!\bin\Debug\ShutUp!.exe.config
+D:\Git\ShutUp-\ShutUp!\obj\Debug\ShutUp!.exe
+D:\Git\ShutUp-\ShutUp!\obj\Debug\ShutUp!.pdb
+D:\Git\ShutUp-\ShutUp!\bin\Debug\ShutUp!.exe
+D:\Git\ShutUp-\ShutUp!\bin\Debug\ShutUp!.pdb
+D:\Git\ShutUp-\ShutUp!\obj\Debug\ShutUp!.csprojResolveAssemblyReference.cache
+D:\Git\ShutUp-\ShutUp!\obj\Debug\ShutUp_.MainForm.resources
+D:\Git\ShutUp-\ShutUp!\obj\Debug\ShutUp_.Properties.Resources.resources
+D:\Git\ShutUp-\ShutUp!\obj\Debug\ShutUp!.csproj.GenerateResource.Cache
