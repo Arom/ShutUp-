@@ -1,5 +1,5 @@
 ﻿/*
-        ShutUp! v .0.1 - Shuts down the PC using shutdown.exe provided with Windows.
+        ShutUp! v .0.2 - Shuts down the PC using shutdown.exe provided with Windows.
         Developed becasue I was too lazy to get up in the middle of the night to shut down
         my computer when I'm finished watching movies.
  
@@ -25,39 +25,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Threading;
 
 namespace ShutUp_
 {
     public partial class MainForm : Form
     {
-        int seconds = 0;
-        Boolean processStarted = false;
+        ShutUp ShutUp;
+        Thread ShutUpThread;
+        int ms = 0;
+        int value;
         public MainForm()
         {
             InitializeComponent();
+            ShutUp = new ShutUp();
         }
-        private int getSeconds()
+        private int GetMs()
         {
-
+            ms = 0;
             if (isInteger(txtHrs) > 0)
             {
-                seconds = seconds + isInteger(txtHrs) * 60 * 60;
+                ms = ms + isInteger(txtHrs) * 60 * 60;
             }
             if (isInteger(txtMins) > 0)
             {
-                seconds = seconds + 60 * isInteger(txtMins);
+                ms = ms + 60 * isInteger(txtMins);
             }
             if (isInteger(txtSecs) > 0)
             {
-                seconds = seconds + isInteger(txtSecs);
+                ms = ms + isInteger(txtSecs);
             }
-            return seconds;
+            return ms * 1000;
         }
 
         private int isInteger(TextBox box)
         {
 
-            int value = 0;
+            value = 0;
             try
             {
                 value = Convert.ToInt32(box.Text);
@@ -71,42 +75,36 @@ namespace ShutUp_
 
         private void btStart_Click(object sender, EventArgs e)
         {
-            seconds = getSeconds();
-            if (processStarted)
+            ms = GetMs();
+            if (ShutUpThread == null)
+            {
+                ShutUpThread = new Thread(() => ShutUp.StartShutdown(ms));
+                ShutUpThread.Start();
+            }
+            else if (ShutUpThread.IsAlive)
             {
                 MessageBox.Show("Shutdown already started. Stop first");
             }
-            else if (seconds <= 0)
-            {
-                DialogResult dr = MessageBox.Show("This means immediate shutdown, go ahead?", "Message", MessageBoxButtons.YesNo);
-                if (dr == DialogResult.Yes)
-                {
-                    Process.Start("shutdown.exe", "-s -t " + seconds);
-
-                    processStarted = true;
-                    seconds = 0;
-                }
-
-            }
-            else
-            {
-                Process.Start("shutdown.exe", "-s -t " + seconds);
-                processStarted = true;
-                seconds = 0;
-            }
-
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            if (!processStarted)
+            if (ShutUpThread == null)
             {
                 MessageBox.Show("No shutdown started to stop");
             }
             else
             {
-                Process.Start("shutdown.exe ", "-a");
-                processStarted = false;
+                try
+                {
+                    ShutUpThread.Abort();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                ShutUpThread = null;
             }
 
         }
